@@ -18,7 +18,11 @@
       "settings": {},
 
       // Add the IDs of extensions you want installed when the container is created.
-      "extensions": ["dbaeumer.vscode-eslint", "Orta.vscode-twoslash-queries", "yoavbls.pretty-ts-errors"]
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "Orta.vscode-twoslash-queries",
+        "yoavbls.pretty-ts-errors"
+      ]
     }
   },
 
