@@ -1,9 +1,5 @@
 import { argv } from "process";
 
-interface programOptions {
-  version: boolean;
-}
-
 export function parseArgs(args: string[]) {
   const version = args.includes("--version");
 
