@@ -1,21 +1,12 @@
-import { argv } from "process";
+import express from 'express'
+const app = express()
+app.use(express.json())
+const port = 3000
 
-export function parseArgs(args: string[]) {
-  const version = args.includes("--version");
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 
-  return {
-    version: version,
-  };
-}
-
-argv
-  .filter((v, i) => i > 1)
-  .forEach((val, index) => {
-    console.log(`${index}: ${val}`);
-  });
-
-const opts = parseArgs(argv.filter((v, i) => i > 1));
-
-if (opts.version) {
-  console.log("v 1.0.0");
-}
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
